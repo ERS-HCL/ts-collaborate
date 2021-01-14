@@ -4,7 +4,7 @@
 ![unit test](https://github.com/ERS-HCL/ts-collaborate/workflows/Unit%20Test/badge.svg)
 ![E2E Test](https://github.com/ERS-HCL/ts-collaborate/workflows/E2E%20Test/badge.svg)
 ![Lint](https://github.com/ERS-HCL/ts-collaborate/workflows/Lint/badge.svg)
-![size](https://github.com/ERS-HCL/ts-collaborate/workflows/Size/badge.svg)
+![size](https://github.com/ERS-HCL/ts-collaborate/workflows/Compressed %20Size/badge.svg)
 ![Release](https://github.com/ERS-HCL/ts-collaborate/workflows/Release/badge.svg)
 
 ## Usage

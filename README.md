@@ -1,4 +1,6 @@
-# TSDX Monorepo Example/Playground
+# TSDX based Monorepo
+
+![github actions](https://github.com/ERS-HCL/ts-collaborate/workflows/<WORKFLOW_FILE_PATH>/badge.svg)
 
 ## Usage
 

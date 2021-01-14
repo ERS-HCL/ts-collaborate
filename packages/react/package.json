@@ -23,12 +23,12 @@
     "dist"
   ],
   "peerDependencies": {
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0"
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   },
   "dependencies": {
-    "@thefakeorg/utils": "^0.0.1",
-    "tslib": "^2.0.0"
+    "@thefakeorg/utils": "*",
+    "tslib": "^2.1.0"
   },
   "publishConfig": {
     "access": "public"

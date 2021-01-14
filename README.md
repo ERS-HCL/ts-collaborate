@@ -1,6 +1,7 @@
 # TSDX based Monorepo
 
-![github actions](https://github.com/ERS-HCL/ts-collaborate/workflows/<WORKFLOW_FILE_PATH>/badge.svg)
+[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
+![workflow](https://github.com/ERS-HCL/ts-collaborate/workflows/CI/badge.svg)
 
 ## Usage
 

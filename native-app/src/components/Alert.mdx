@@ -1,0 +1,29 @@
+---
+name: Alert
+menu: Components
+---
+
+import { Playground, Props } from 'docz';
+import { Alert } from './Alert.tsx';
+import { toSlug } from '@thefakeorg/utils';
+
+# Alert
+
+## Properties
+
+<Props of={Alert} />
+
+## Basic usage
+
+<Playground>
+  <Alert>Some message</Alert>
+</Playground>
+
+## Using different kinds
+
+<Playground>
+  <Alert kind="info">Some message</Alert>
+  <Alert kind="positive">Some message</Alert>
+  <Alert kind="negative">Some message</Alert>
+  <Alert kind="warning">{`Using shared lib for generating slug: ${toSlug('hello world')}`}</Alert>
+</Playground>

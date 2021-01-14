@@ -1,7 +1,11 @@
 # TSDX based Monorepo
 
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
-![workflow](https://github.com/ERS-HCL/ts-collaborate/workflows/CI/badge.svg)
+![unit test](https://github.com/ERS-HCL/ts-collaborate/workflows/Unit%20Test/badge.svg)
+![E2E Test](https://github.com/ERS-HCL/ts-collaborate/workflows/E2E%20Test/badge.svg)
+![Lint](https://github.com/ERS-HCL/ts-collaborate/workflows/Lint/badge.svg)
+![size](https://github.com/ERS-HCL/ts-collaborate/workflows/Size/badge.svg)
+![Release](https://github.com/ERS-HCL/ts-collaborate/workflows/Release/badge.svg)
 
 ## Usage
 

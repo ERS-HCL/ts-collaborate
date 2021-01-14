@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+environment: master
 
 jobs:
   test:

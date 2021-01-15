@@ -1,0 +1,32 @@
+---
+name: CounterBase
+menu: Components
+order: 2
+---
+
+import { Playground, Props } from 'docz';
+import CounterBase from './CounterBase';
+
+# CounterBase
+
+## Properties
+
+<Props of={CounterBase} />
+
+## Basic usage
+
+<Playground>
+ {() => {
+    const [counter, setCounter] = React.useState(0);
+    return (
+        <CounterBase
+          onDown={() => setCounter(counter => counter + 1)}
+          onUp={() => setCounter(counter => counter - 1)}
+          count={counter}
+        />
+    )
+  }}
+
+</Playground>
+
+

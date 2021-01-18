@@ -1,0 +1,39 @@
+{
+  "name": "@thefakeorg/react-native",
+  "version": "0.0.1",
+  "description": "Official React Native library for @thefakeorg",
+  "author": "HCL",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mono/mono.git",
+    "directory": "packages/react"
+  },
+  "scripts": {
+    "start": "tsdx watch --tsconfig tsconfig.build.json --verbose --noClean",
+    "build": "tsdx build --tsconfig tsconfig.build.json",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "prepublish": "npm run build"
+  },
+  "main": "dist/index.js",
+  "module": "dist/react.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "README.md",
+    "dist"
+  ],
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-native": ">=0.60",
+    "react-native-web": ">=0.13.0"
+  },
+  "dependencies": {
+    "tslib": "^2.1.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "react-native": "^0.63.4"
+  }
+}

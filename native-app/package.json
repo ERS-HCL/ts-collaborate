@@ -30,7 +30,8 @@
   },
   "alias": {
     "@thefakeorg/utils": "../packages/utils",
-    "@thefakeorg/store": "../packages/store"
+    "@thefakeorg/store": "../packages/store",
+    "@thefakeorg/react-native": "../packages/react-native"
   },
   "private": true
 }

@@ -17,7 +17,8 @@
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-40.0.1.tar.gz",
     "react-native-web": "~0.13.12",
-    "react-redux": "^7.2.2"
+    "react-redux": "^7.2.2",
+    "@thefakeorg/react-native": "../packages/react-native/dist"
   },
   "devDependencies": {
     "@babel/core": "~7.9.0",
@@ -30,8 +31,7 @@
   },
   "alias": {
     "@thefakeorg/utils": "../packages/utils",
-    "@thefakeorg/store": "../packages/store",
-    "@thefakeorg/react-native": "../packages/react-native"
+    "@thefakeorg/store": "../packages/store"
   },
   "private": true
 }

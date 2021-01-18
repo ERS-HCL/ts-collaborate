@@ -1,8 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import * as React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { toSlug } from '@thefakeorg/utils';
 import Counter from './src/components/Counter';
+import { LoadingButton } from '@thefakeorg/react-native';
 
 export default function App() {
   return (
@@ -12,6 +13,9 @@ export default function App() {
         'hello world'
       )}`}</Text>
       <Counter />
+      <View style={styles.btnContainer}>
+        <LoadingButton loading />
+      </View>
       <StatusBar style="auto" />
     </View>
   );
@@ -23,5 +27,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  btnContainer: {
+    padding: 2,
+    margin: 2,
   },
 });

@@ -17,8 +17,7 @@
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-40.0.1.tar.gz",
     "react-native-web": "~0.13.12",
-    "react-redux": "^7.2.2",
-    "@thefakeorg/react-native": "../packages/react-native/dist"
+    "react-redux": "^7.2.2"
   },
   "devDependencies": {
     "@babel/core": "~7.9.0",

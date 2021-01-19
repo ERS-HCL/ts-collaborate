@@ -1,7 +1,7 @@
 import React from 'react';
 import { Slug, Bold , Zop } from '../src';
 
-export default { title: 'TS Collaborate/Components' };
+export default { title: 'TS Collaborate/Components/React' };
 
 export const SlugComponent = () => {
   return <Slug message="This is a Slug" />;

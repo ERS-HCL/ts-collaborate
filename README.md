@@ -9,10 +9,13 @@
 
 ## Usage
 
-This monorepo is setup for a dummy `@thefakeorg/` NPM organization. There are 2 packages by default:
+This monorepo is setup for a dummy `@thefakeorg/` NPM organization. There are 4 shared packages:
 
-- `@thefakeorg/react` - A placholder React component
+- `@thefakeorg/react` - React shared component library
+- `@thefakeorg/react` - React Native shared component library
 - `@thefakeorg/utils` - A utils packages
+- `@thefakeorg/store` - A redux store 
+
 
 Unlike other TSDX templates, the developer experience for this template is currently a bit more manual.
 
@@ -36,18 +39,52 @@ yarn start
 
 This builds each package to `<packages>/<package>/dist` and runs the project in watch mode so any edits you save inside `<packages>/<package>/src` cause a rebuild to `<packages>/<package>/dist`. The results will stream to to the terminal.
 
-### Using the example/playground
+### Using the web-app (NextJS Web APP)
 
-You can play with local packages in the Parcel-powered example/playground.
+NextJS App which is using the shared libraries
 
 ```sh
-yarn start:app
+yarn start:web-app
 ```
 
-This will start the example/playground on `localhost:1234`. If you have lerna running watch in parallel mode in one terminal, and then you run parcel, your playground will hot reload when you make changes to any imported module whose source is inside of `packages/*/src/*`. Note that to accomplish this, each package's `start` command passes TDSX the `--noClean` flag. This prevents Parcel from exploding between rebuilds because of File Not Found errors.
+This will start the web-app on `localhost:3000`. If you have lerna running watch in parallel mode in one terminal, and then you run `yarn dev` inside the project directory for hot reloading
 
-Important Safety Tip: When adding/altering packages in the playground, use `alias` object in package.json. This will tell Parcel to resolve them to the filesystem instead of trying to install the package from NPM. It also fixes duplicate React errors you may run into.
+Important Safety Tip: When adding/altering packages in the playground, use `alias` object in package.json. This will tell Webpack/Parcel to resolve them to the filesystem instead of trying to install the package from NPM. It also fixes duplicate React errors you may run into. This approach works fine in the NextJS application , however for the `native-app` this seems to have issues related to the `multiple react versions` where ever the `react` dependency is involved. To handle this we use the `traditional link` approach for hot module reload.
+
+### Using the native-app (React Native App)
+
+
+React Native App which is using the shared libraries
+
+```sh
+yarn start:native-app
+```
+
+This builds the shared dependencies and starts the application.
+
+As mentioned above for hot module reload based debugging for the shared dependencies specially where `react` dependencies are involved, we need to do the following
+
+```sh
+cd <root_dir>packages/react-native
+yarn link
+```
+
+This will create a link for `@thefakeorg/react-native` library and now be linked to the `native-app`
+
+```sh
+cd <root_dir>/native-app
+yarn link "@thefakeorg/react-native"
+```
+
+Now you can hot module reload the shared react native components.
 
 ### Running Cypress
 
 (In a third terminal) you can run Cypress and it will run your integration tests against the playground/example. If you want to keep integration tests and examples seperate you can copy the example folder to another folder called like `app` or whatever. Cypress will look for `localhost:3000` by default. If you change ports, also make sure to update [`.github/integration.yaml`](.github/integration.yml) as well.
+
+
+### Running Storybook
+
+```
+yarn storybook
+```

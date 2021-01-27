@@ -23,8 +23,10 @@
     "dist"
   ],
   "peerDependencies": {
-    "react": "^16.13.1",
-    "react-native": ">=0.60"
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-native": "0.63.4",
+    "react-native-web": "~0.11"
   },
   "dependencies": {
     "tslib": "^2.1.0"
@@ -33,6 +35,10 @@
     "access": "public"
   },
   "devDependencies": {
-    "react-native": "^0.63.4"
-  }
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-native": "0.63.4",
+    "react-native-web": "~0.11"
+  },
+  "nohoist": ["**/react-native", "**/react-native/**"]
 }

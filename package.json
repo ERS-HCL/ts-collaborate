@@ -49,5 +49,6 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "chromatic": "npx chromatic"
-  }
+  },
+  "nohoist": ["**/react-native", "**/react-native/**"]
 }

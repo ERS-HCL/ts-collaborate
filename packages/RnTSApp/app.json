@@ -1,0 +1,9 @@
+{
+  "name": "RnTSApp",
+  "displayName": "RnTSApp",
+  "expo": {
+    "platforms": [
+      "web"
+    ]
+  }
+}

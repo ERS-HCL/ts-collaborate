@@ -5,7 +5,7 @@ import Counter from './src/components/Counter';
 import {LoadingButton} from '@thefakeorg/react-native';
 
 /**
- * 
+ * Demo App
  */
 export default function App() {
   return (

@@ -11,7 +11,7 @@
   "scripts": {
     "start": "tsdx watch --tsconfig tsconfig.build.json --verbose --noClean",
     "build": "tsdx build --tsconfig tsconfig.build.json",
-    "test": "tsdx test",
+    "test": "jest",
     "lint": "tsdx lint",
     "prepublish": "npm run build"
   },
@@ -38,7 +38,32 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "0.63.4",
-    "react-native-web": "~0.11"
+    "react-native-web": "~0.11",
+    "jest": "^25.1.0",
+    "@types/jest": "^25.2.3",
+    "@types/react-native": "^0.63.2",
+    "@types/react-test-renderer": "^16.9.2",
+    "@testing-library/react-native": "^7.1.0",
+    "metro-react-native-babel-preset": "^0.59.0",
+    "react-test-renderer": "16.13.1"
   },
-  "nohoist": ["**/react-native", "**/react-native/**"]
+  "jest": {
+    "preset": "react-native"
+  },
+  "workspaces": {
+    "nohoist": [
+      "react-native",
+      "react-native/**",
+      "react",
+      "react/**",
+      "**/react-native-typescript-transformer",
+      "**/react-native-typescript-transformer/**",
+      "@reduxjs/toolkit",
+      "@reduxjs/toolkit/**",
+      "@testing-library/react-native/**",
+      "@testing-library/react-native",
+      "jest",
+      "jest/**"
+    ]
+  }
 }

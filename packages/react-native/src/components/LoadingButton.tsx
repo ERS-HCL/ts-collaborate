@@ -5,13 +5,14 @@ interface ButtonProps {
   loading?: boolean;
 }
 
+
 const LoadingButton = (props: ButtonProps) => {
   const { loading } = props;
 
   return (
     <View style={styles.container}>
-      <Button title="Loading Button" disabled={loading} onPress={() => {}} />
-      {loading && <ActivityIndicator style={styles.indicator} animating />}
+      <Button title="Loading Button !!!" disabled={loading} onPress={() => {}} />
+      {loading && <ActivityIndicator style={styles.indicator} animating color="#999999"/>}
     </View>
   );
 };
@@ -22,6 +23,7 @@ const styles = StyleSheet.create({
   },
   indicator: {
     position: 'absolute',
+    opacity: 1,
     top: 8,
     right: 8,
   },

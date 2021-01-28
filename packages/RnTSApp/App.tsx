@@ -13,7 +13,7 @@ export default function App() {
       )}`}</Text>
       <Counter />
       <View style={styles.btnContainer}>
-        <LoadingButton loading />
+        <LoadingButton loading={true} />
       </View>
     </View>
   );

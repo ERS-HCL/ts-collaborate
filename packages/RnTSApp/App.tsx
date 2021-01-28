@@ -4,6 +4,9 @@ import {toSlug} from '@thefakeorg/utils';
 import Counter from './src/components/Counter';
 import {LoadingButton} from '@thefakeorg/react-native';
 
+/**
+ * 
+ */
 export default function App() {
   return (
     <View style={styles.container}>

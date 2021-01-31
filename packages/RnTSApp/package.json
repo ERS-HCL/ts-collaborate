@@ -48,8 +48,9 @@
     "setupFiles": [
       "./jestSetup.js"
     ],
+    "moduleDirectories": ["node_modules", "<rootDir>/node_modules"],
     "transformIgnorePatterns": [
-      "node_modules/(?!react-native|react-native-maps)"
+      "node_modules/(?!(jest-)?react-native|@react-native-community|@thefakeorg|@thefakeorg/.*)"
     ],
     "moduleFileExtensions": [
       "ts",
